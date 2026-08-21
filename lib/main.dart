@@ -105,8 +105,25 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            GestureDetector(
+              onTap:(){
+                print('on tap');
+              },
+              onDoubleTap: (){
+                print('doble tap');
+              },
+              onLongPress: (){
+                print('long press');
+              },
+              child:Container(
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  border: Border.all(width:16, color: Colors.black),
+                  borderRadius: BorderRadius.circular(16.0),
+                ),
+                width: 100.0,
+                height:100.0
+              )
             ),
             Text(
               '$_counter',
